@@ -1,4 +1,5 @@
-let trafficLight;
+let trafficLight = 'verde'
+
 
 switch (trafficLight) {
     case 'vermelho':
@@ -12,7 +13,7 @@ switch (trafficLight) {
     case 'verde':
         console.log('siga');
         break;
-    
         
-    
+    default:
+        console.log('valor não identificado'); 
 }
