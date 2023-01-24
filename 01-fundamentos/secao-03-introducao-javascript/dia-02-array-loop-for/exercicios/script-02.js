@@ -6,3 +6,8 @@ for (let index = 0; index < numbers.length; index += 1){
 }
 let media = sum / numbers.length
 console.log(media);
+if (media > 20){
+    console.log('média maior do que 20')
+} else {
+    console.log('média menor do que 20')
+} 
