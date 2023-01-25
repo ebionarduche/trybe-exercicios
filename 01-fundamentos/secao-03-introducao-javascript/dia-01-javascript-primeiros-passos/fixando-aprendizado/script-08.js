@@ -1,4 +1,4 @@
-let trafficLight = 'verde'
+let trafficLight = 'amarelo'
 
 
 switch (trafficLight) {
