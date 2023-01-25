@@ -1,29 +1,10 @@
-let player1 = 'papel';
-let player2 = 'pedra';
+// 1 - 
+// Faça um algoritmo que calcule a soma de 1 a 50 usando a estrutura "for" e retorne no formato: 
+//A soma total de 1 a 50 é:
 
-if (player1 == 'pedra') {
-    if (player2 == 'tesoura') {
-        console.log('player1 wins');
-    } else if (player2 == 'papel') {
-        console.log('player2 wins');
-    } else {
-        console.log('empate');
-    }
+let somaTotal = 0;
 
-} else if (player1 == 'tesoura') {
-    if (player2 == 'pedra') {
-        console.log('player2 wins');
-    } else if (player2 == 'papel') {
-        console.log('player1 wins');
-    } else {
-        console.log('empate');
-    }
-} else if (player1 == 'papel') {
-    if (player2 == 'tesoura') {
-        console.log('player2 wins')
-    } else if (player2 == 'pedra') {
-        console.log('player1 wins')
-    } else {
-        console.log('empate')
-    }
+for (index = 1; index <= 50; index += 1) {
+    somaTotal += index    
 }
+console.log(somaTotal);
