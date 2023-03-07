@@ -102,5 +102,14 @@ const everyoneWasBornOnSecXX = (array) => array.every((birth) => {
 const someBookWasReleaseOnThe80s = () => {
   return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 }
-console.log(someBookWasReleaseOnThe80s());
+// console.log(someBookWasReleaseOnThe80s());
 
+// Retonar false caso nenhum author tenha nascido no mesmo ano.
+
+const authorUnique = () => {
+  return books.every((book) =>
+    !books.some((someBook) =>
+   (someBook.author.birthYear === book.author.birthYear)));
+}
+
+console.log(authorUnique());
