@@ -68,19 +68,30 @@ const countries = [
 
 // 1 - Calcule a quantidade total da população de todos os países.
 
-const populationCalculator = () => countries.reduce((acc, cur) => acc + cur.population,0);
+const populationCalculator = () => countries.reduce((acc, cur) => acc + cur.population, 0);
 // console.log(populationCalculator())
 
 // 2 - Calcule a área total de todos os países.
 
-const totalAreaCalculator = () => countries.reduce((acc, cur) => acc + cur.area,0);
+const totalAreaCalculator = () => countries.reduce((acc, cur) => acc + cur.area, 0);
 // console.log(totalAreaCalculator())
 
 //🚀 3 - Encontre o país com o maior nome.
 
-const higherNameCountry = () => countries.reduce((acc, cur) => 
+const higherNameCountry = () => countries.reduce((acc, cur) =>
   cur.name.length > acc.name.length ? cur : acc);
-  console.log(higherNameCountry())
+// console.log(higherNameCountry())
 
-  //🚀 4 - Retorne a quantidade de vezes que a letra a maiúscula ou minúscula aparece no array de nomes.
+//🚀 4 - Retorne a quantidade de vezes que a letra a maiúscula ou minúscula aparece no array de nomes.
 
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+const letterArary = names.join('').split('');
+
+const ContLetter = () => letterArary.reduce((acc, cur) =>
+cur === 'a' || cur === 'A' ? acc += 1 : acc, 0);
+
+console.log(ContLetter())
