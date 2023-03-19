@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nanoid": "^4.0.1"
+    "@trybe/eslint-config-frontend": "^1.8.3",
+    "nanoid": "^4.0.1",
+    "vite": "^4.2.0"
   },
-  "type": "module"
-  
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
 }
