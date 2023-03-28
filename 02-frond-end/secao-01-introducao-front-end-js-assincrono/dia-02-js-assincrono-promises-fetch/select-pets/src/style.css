@@ -1,4 +1,21 @@
 body {
   background-color: black;
-  
+}
+#random{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
