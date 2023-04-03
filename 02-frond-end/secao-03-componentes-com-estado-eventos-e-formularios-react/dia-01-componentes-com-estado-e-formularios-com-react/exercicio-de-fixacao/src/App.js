@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function handleClickOne() {
+  console.log('Clicou! no botão 01')
+}
+
+function handleClickTwo() {
+  console.log('Clicou! no botão 02')
+}
+
+function handleClickThree() {
+  console.log('Clicou! no botão 03')
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <button onClick={handleClickOne}>botão01</button>
+        <button onClick={handleClickTwo}>botão02</button>
+        <button onClick={handleClickThree}>botão03</button>
+      </div>
+
+    )
+  }
 }
 
 export default App;
