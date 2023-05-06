@@ -22,6 +22,7 @@
       <button id="toggle-status">Ficar Online</button>
     </div>
     <script>
+      
       const INITIAL_STATE = {
         status: 'offline',
         theme: 'dark',
@@ -39,12 +40,14 @@
               ...state,
               status: state.status === 'offline' ? 'online' : 'offline',
             }
-          default: 
+            default: 
             return state;
+          }
         }
-      }
-
-      const store = Redux.createStore(reduce);
+        
+        
+        const store = Redux.createStore(reduce);
+        console.log(store);
 
       const themeButton = document.getElementById('toggle-theme');
       const statusButton = document.getElementById('toggle-status');
