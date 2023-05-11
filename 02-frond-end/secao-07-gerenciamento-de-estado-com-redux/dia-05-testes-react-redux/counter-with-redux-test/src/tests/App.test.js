@@ -39,6 +39,4 @@ test('testa o click dos botões', () => {
   userEvent.click(buttons[1]);
   expect(screen.getByText(/5/i)).toBeInTheDocument();
 
-  
-  
 })
