@@ -1,21 +1,9 @@
 import React from "react";
-import { Provider } from "react-redux";
-import { legacy_createStore as createStore, combineReducers } from "redux";
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event';
-import App from '../App'
-import counterReducer from "../redux/reducers/counterReducer";
+import App from '../App';
+import renderWithRedux from "./helpers/renderWithRedux";
 
-const renderWithRedux = (
-  component,
-  {
-    initialState,
-    store = createStore(combineReducers({ counterReducer }), initialState),
-  } = {}
-) => ({
-  ...render(<Provider store={store}>{component}</Provider>),
-  store,
-});
 
 test('A página deve renderzar dois botões e o número "0"', () => {
   renderWithRedux(<App />);
