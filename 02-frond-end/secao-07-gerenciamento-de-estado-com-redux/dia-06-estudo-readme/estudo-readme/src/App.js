@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import Content from './components/Content';
 
 class App extends Component {
   render() {
     return (
-      <h1>Login</h1>
+      <div>
+      <Content />      
+      </div>
     )
   }
 }
