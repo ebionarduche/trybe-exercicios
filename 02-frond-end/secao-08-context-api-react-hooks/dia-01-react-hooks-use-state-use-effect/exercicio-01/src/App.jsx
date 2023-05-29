@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 function App() {
 const [name, setName] = useState('');
 const [age, setAge] = useState('')
+const [city, setCity] = useState('')
+const [module, setModule] = useState();
 
   return (
     <div>
@@ -27,6 +29,9 @@ const [age, setAge] = useState('')
             type="number"
             name="age"
             placeholder='Digite sua idade'
+            value={age}
+            onChange={({ target }) => setAge(target.value)}
+
             />
         </label>
 
@@ -36,8 +41,11 @@ const [age, setAge] = useState('')
             type="text"
             name='city'
             placeholder='Cidade onde mora'
+            value={city}
+            onChange={({ target }) => setCity(target.value)}
             />
         </label>
+
     </fieldset>
     <fieldset>
           <legend>Módulo que está estudando:</legend>
@@ -47,6 +55,8 @@ const [age, setAge] = useState('')
             type="radio" 
             name="module" 
             value='Fundamentos' 
+            checked={ module === 'Fundamentos'}
+            onChange={({ target }) => setModule(target.value)}
           />
           Fundamentos:
         </label>
@@ -56,7 +66,11 @@ const [age, setAge] = useState('')
             id='frontend'
             type="radio" 
             name="module" 
-            value='Front-end' 
+            value='Front-end'
+            checked={ module === 'Front-end'}
+            onChange={({ target }) => setModule(target.value)}
+
+
           />
           Frontend:
         </label>
@@ -67,6 +81,9 @@ const [age, setAge] = useState('')
             type="radio" 
             name="module" 
             value='Back-end' 
+            checked={ module === 'Back-end'}
+            onChange={({ target }) => setModule(target.value)}
+
           />
           BackEnd:
         </label>
@@ -76,14 +93,22 @@ const [age, setAge] = useState('')
             id='cs'
             type="radio" 
             name="module" 
-            value='Ciência da computação' 
+            value='Ciência da computação'
+            checked={ module === 'Ciência da computação'}
+            onChange={({ target }) => setModule(target.value)}
           />
           Ciência da computação:
-        </label>
-
-
+          </label>
+          <button
+            type='submit'
+            onClick={(event) => {
+              event.preventDefault();
+              console.log('Click!');
+            }}
+            >
+              Enviar
+          </button>
     </fieldset>
-
       
     </div>
   )
