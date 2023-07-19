@@ -3,6 +3,8 @@ const validateName = require('../middlewares/validateName');
 const validatePrice = require('../middlewares/validatePrice');
 const validateDescription = require('../middlewares/validateDescription');
 const validateCreateAt = require('../middlewares/validateCreateAt');
+const validateRating = require('../middlewares/validateRating');
+const validadeDifficulty = require('../middlewares/validadeDifficulty');
 
 const app = express()
 
@@ -13,6 +15,8 @@ validateName,
 validatePrice,
 validateDescription,
 validateCreateAt,
+validateRating,
+validadeDifficulty,
 (_req, res) => {
   res.status(201).json({message: 'Atividade registrada com sucesso!'})
 })
