@@ -17,6 +17,10 @@ export default class Subject {
   }
 }
 
+
+const math = new Subject('matemática')
+console.log(math);
+
 // `Class`: Subject
 // `Attributes`:
 //     - name: nome da disciplina
