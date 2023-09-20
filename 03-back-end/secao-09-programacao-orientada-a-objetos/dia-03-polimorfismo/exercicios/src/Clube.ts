@@ -10,3 +10,5 @@ class Clube {
     return this.quadras[index] as T
   }
 }
+
+export default Clube
